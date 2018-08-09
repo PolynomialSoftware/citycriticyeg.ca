@@ -1,0 +1,11 @@
+---
+layout: default
+---
+{{ page.opening-sentence }}
+<div class="blog list">
+    <h1>Filed Under <small>#{{ page.category }}</small></h1>
+
+    {% for post in site.categories[page.category] %}
+        {{ post }}
+    {% endfor %}
+</div>
