@@ -1,0 +1,5 @@
+pages:
+- name: Home
+  link: /
+- name: Discussions
+  link: /Discussion-topics
