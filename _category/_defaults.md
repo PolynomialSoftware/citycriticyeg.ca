@@ -1,6 +1,6 @@
 ---
 title:
-category:
-permalink:
+category: 
+permalink: /category/new-category-name
 opening-sentence:
 ---
