@@ -22,8 +22,11 @@ collections:
     output: true
 
 defaults:
-  -
-    scope:
+  - scope:
+      path: "index.html"
+    values:
+      layout: "default"
+  - scope:
       path: ""
       type: category
     values:
