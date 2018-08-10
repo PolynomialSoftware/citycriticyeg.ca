@@ -1,10 +1,7 @@
 ---
 title: Effective or Not? Photo Radar
-date:
-category:
-  - bike-lanes
-  - global-warming
-  - lrt-construction
-  - photo-radar
-  - playground-zones
+date: 2018-08-10 00:00:00
+category: photo-radar
 ---
+
+Is photo radar even effective?
