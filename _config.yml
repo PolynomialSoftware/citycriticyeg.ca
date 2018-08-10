@@ -6,9 +6,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # External Services
+facebook_page:
+linkedin_page:
 twitter_username:
-github_username:
-disqus_shortname:
+disqus_shortname: prototype-sites
 
 # Build settings
 markdown: kramdown
@@ -27,3 +28,9 @@ defaults:
       type: category
     values:
       layout: "category"
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: "post"
+      comments: true

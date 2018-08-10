@@ -1,11 +1,22 @@
 ---
 layout: default
 ---
-{{ page.opening-sentence }}
-<div class="blog list">
-    <h1>Filed Under <small>#{{ page.category }}</small></h1>
+{% include return-home-nav.html %}
+<div class="container">
+    <h1>{{ page.title }} Discussion</h1>
 
     {% for post in site.categories[page.category] %}
-        {{ post }}
+    <a href="{{post.url}}">
+        <div class="d-flex mx-auto" style="max-width: 800px;">
+            <div class="mr-auto">
+                <h4 class="mb-0">{{post.title}}</h4>
+                <p class="font-weight-light">Date published: {{ post.date | date: "%Y-%m-%d" }}</p>
+            </div>
+            <div class="pt-4 disqus-comment-count" data-disqus-identifier="{{post.id}}"></div>
+        </div>
+    </a>
     {% endfor %}
+
 </div>
+
+<script id="dsq-count-scr" src="http://{{site.disqus_shortname}}.disqus.com/count.js" async></script>

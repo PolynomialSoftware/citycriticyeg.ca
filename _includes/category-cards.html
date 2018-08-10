@@ -1,13 +1,13 @@
-<div class="card-deck">
+<div class="card-columns">
     {% for item in site.category %}
     <div class="card">
-        <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
+        <img class="card-img-top" src="http://via.placeholder.com/266x160" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title"> {{ item.title }}</h5>
             <p class="card-text">{{ item.opening-sentence }}</p>
         </div>
         <div class="card-footer">
-            <a href="{{ item.url }}" class="btn btn-primary">Join the discussion on {{ item.title }}</a>
+            <a href="{{ item.url }}" class="">Go to discussion</a>
         </div>
     </div>
     {% endfor %}
