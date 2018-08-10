@@ -5,6 +5,5 @@ category: "lrt-construction"
 ---
 
 {{ page.title }}
-{{page.id}}
 
 Do you experience traffic delays from LRT?
