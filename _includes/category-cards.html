@@ -1,13 +1,17 @@
 <div class="card-columns">
     {% for item in site.category %}
     <div class="card">
-        <img class="card-img-top" src="https://via.placeholder.com/266x160" alt="Card image cap">
+        <img class="card-img-top" src="{{ site.url }}/images/{{ item.category }}.jpg" alt="{{ item.title }}">
         <div class="card-body">
             <h5 class="card-title"> {{ item.title }}</h5>
             <p class="card-text">{{ item.opening-sentence }}</p>
         </div>
         <div class="card-footer">
+            {% if item.publish == true %}
             <a href="{{ item.url }}" class="">Go to discussion</a>
+            {% elsif item.publish == false %}
+            Discussion coming soon
+            {% endif %}
         </div>
     </div>
     {% endfor %}
