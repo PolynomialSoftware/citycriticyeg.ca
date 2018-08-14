@@ -1,20 +1,42 @@
 ---
 layout: default
----
-{% include return-home-nav.html %}
-<div class="container">
-    <h1>{{ page.title }} Discussion</h1>
+--- 
 
-    {% for post in site.categories[page.category] %}
-    <a href="{{post.url}}">
+{% include return-home-nav.html %}
+
+<section>
+    <div class="container">
+        <h1>{{ page.title }} Discussions</h1>
+        {{ page.opening-sentence }}
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+
+        {% for post in site.categories[page.category] %}
+
         <div class="d-flex mx-auto" style="max-width: 800px;">
             <div class="mr-auto">
                 <h4 class="mb-0">{{post.title}}</h4>
-                <p class="font-weight-light">Date published: {{ post.date | date: "%Y-%m-%d" }}</p>
+                <p class="font-weight-light">Published by <cite>Rick Comrie</cite> on {{ post.date | date: "%B %d, %Y" }}
+                    </p>
             </div>
-            <div class="pt-4 disqus-comment-count" data-disqus-identifier="{{post.id}}"></div>
-        </div>
-    </a>
-    {% endfor %}
 
-</div>
+            <div>
+                <a class="btn btn-primary d-flex" href="{{ post.url }}">
+                    <div class="mr-auto pr-2">
+                        {% include icons/comment-solid.html %}
+                    </div>
+                    <div class="my-auto">
+                        <div class="disqus-comment-count" data-disqus-identifier="{{post.id}}">Comments</div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
