@@ -1,15 +1,13 @@
 title: City Critic YEG
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >- 
   A site to voice your opinions about subject areas in the city of Edmonton
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://rad-dice.cloudvent.net" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.citycriticyeg.ca" # the base hostname & protocol for your site, e.g. http://example.com
 
 # External Services
 facebook_page:
 linkedin_page:
 twitter_username:
-disqus_shortname: prototype-sites
+disqus_shortname: citycriticyeg
 
 collections:
   category:
